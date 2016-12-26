@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch';
 
 export class ProductService {
 
-    private _productUrl = 'http://localhost:51727/api/Product';
+    private _productUrl = 'http://localhost:51727/api/Products';
     constructor(private _http: Http) { }
 
     getProducts(): Observable<IProduct[]> {

@@ -1,15 +1,15 @@
 ﻿
 
 export interface IProduct {
-    
-        productId: number,
-        productName: string,
-        productCode: number,
-        releaseDate: Date,
-        description: string,
-        price: number,
-        starRating: number,
-        imageUrl: string
+
+        productId: number;
+        productName: string;
+        productCode: number;
+        releaseDate: Date;
+        description: string;
+        price: number;
+        starRating: number;
+        imageUrl: string;
     //           "productId": 1,
     //"productName": "Leaf Rake",
     //"productCode": "GDN-0011",
