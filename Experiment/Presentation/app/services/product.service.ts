@@ -1,6 +1,6 @@
 ﻿import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Product } from '../models/product.model';
+import { IProduct } from '../models/product.model';
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
@@ -13,9 +13,9 @@ export class ProductService {
     private _productUrl = 'http://localhost:51727/api/Product';
     constructor(private _http: Http) { }
 
-    getProducts(): Observable<Product[]> {
+    getProducts(): Observable<IProduct[]> {
         return this._http.get(this._productUrl)
-            .map((response: Response) => <Product[]>response.json())
+            .map((response: Response) => <IProduct[]>response.json())
             .do(data => console.log('All' + JSON.stringify(data)))
             .catch(this.handleError);
     }

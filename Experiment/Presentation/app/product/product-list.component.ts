@@ -1,5 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { Product } from '../models/product.model';
+import { IProduct } from '../models/product.model';
 import {ProductService} from '../services/product.service'
 
 @Component({
@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
     showImage: boolean = false;
     listFilter: string = 'cart';
     errorMessage :string;
-    products: Product[]; 
+    products: IProduct[]; 
     private _productService: ProductService;
 
     constractor(  productService: ProductService) {
