@@ -1,7 +1,19 @@
+
+
+import { ProductService } from './services/product.service';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+    selector: 'pm-app',
+    template: `
+            <div>
+                <h1>{{pageTitle}}</h1>
+                <pm-products></pm-products>
+                <pm-form></pm-form>
+            </div>
+`,
+    providers: [ProductService]
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent {
+    pageTitle: string = 'ACME Product Management';
+}
